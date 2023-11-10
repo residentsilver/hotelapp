@@ -4,7 +4,7 @@
 
 @section('menubar')
     @parent
-    予約内容を表示
+    予約明細を表示
 @endsection
 
 
@@ -21,20 +21,20 @@
   <table>
     <tr>
         <th>ID</th>
-        <th>利用者名</th>
-        <th>人数</th>
-        <th>チェックイン時刻</th>
-        <th>チェックアウト時刻</th>
+        <th>予約</th>
+        <th>部屋</th>
+        <th>宿泊日</th>
+        <th>宿泊料金</th>
         <th>更新</th>
         <th>削除</th>
     </tr>
     @foreach ($items as $item)
         <tr>
           <td>{{$item ->book_id}}</td>
-          <td>{{$item ->user->guests_name}}</td>
-          <td>{{$item ->number_of_people}}</td>
-          <td>{{$item ->checkin_date}}</td>
-          <td>{{$item ->checkout_date}}</td>
+          <td>{{$item ->user->book_id}}</td>
+          <td>{{$item ->user1->room_id}}</td>
+          <td>{{$item ->stay_days}}</td>
+          <td>{{$item ->stay_price}}</td>
 
           {{-- <form action="book/edit" method="post">
             @csrf

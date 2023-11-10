@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hotel_book extends Model
 {
-    protected $guarded = array('id');
+    protected $guarded = array('book_id');
+    protected $primaryKey = 'book_id';
 
-    public function Hotel_guests(){
-        return $this->belongsTo('App\Hotel_guest');
+    public function user(){
+        return $this->belongsTo('App\Hotel_guest','guests_id','guests_id');
     }
 }

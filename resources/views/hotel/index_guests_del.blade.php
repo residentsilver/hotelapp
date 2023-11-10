@@ -8,8 +8,8 @@
 @endsection
 
 @section('content')
-<p>登録者の名前を入力して検索できる。</p>
-{{-- <form action="/book/find" method="post">
+{{-- <p>本の名前を入力して検索できる。</p>
+<form action="/book/find" method="post">
   @csrf
   <input type="text" name="input" value="">
   <input type="submit" value="find">
@@ -25,16 +25,31 @@
         <th>更新</th>
         <th>削除</th>
     </tr>
-    @foreach ($items as $item)
+
         <tr>
-          <td>{{$item ->guests_id}}</td>
-          <td>{{$item ->guests_name}}</td>
-          <td>{{$item ->guests_address}}</td>
-          <td>{{$item ->guests_tel}}</td>
-          <td><a href="/hotel/guests/edit?id={{$item ->guests_id}}">更新</a></td>
-          <td><a href="/hotel/guests/del?id={{$item ->guests_id}}">削除</a></td>
+          <form action="/hotel/guests/del" method="post">
+            <table>
+                @csrf
+                <input type="hidden" name="id" value="{{$form->id}}">
+                <tr>
+                    <th>name:</th>
+                    <td>{{$form->guests_name}}</td>
+                </tr>
+                <tr>
+                    <th>address:</th>
+                    <td>{{$form->guests_address}}</td>
+                </tr>
+                <tr>
+                    <th>tel:</th>
+                    <td>{{$form->guests_tel}}</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="send"></td>
+                </tr>
+            </table>
+            </form>
         </tr>
-    @endforeach
 </table>
 <table>
   
@@ -50,7 +65,7 @@
 @endif
 
 {{--追加フォーム--}}
-<form action="/hotel/guests/add" method="post">
+<form action="book\add" method="post">
   @csrf
   <tr>
     <td class="id"><input type="hidden" name="id"></td>

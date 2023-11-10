@@ -69,7 +69,13 @@
     <h1>ホテルページ</h1>
 
     @section('menubar')
-    <a href="/book">トップページ</a>
+    <a href="/hotel">トップページ</a>
+    <a href="/hotel/books">予約一覧</a>
+    <a href="/hotel/guests">利用者一覧</a>
+    <a href="/hotel/rooms">部屋一覧</a>
+    <a href="/hotel/room_masters">部屋マスター</a>
+    <a href="/hotel/details">予約明細</a>
+
     <h2 class="menutitle">※メニュー</h2>
     <ul>
         <li>@show</li>

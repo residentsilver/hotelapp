@@ -4,9 +4,8 @@
 
 @section('menubar')
     @parent
-    予約内容を表示
+    登録中の利用者を編集
 @endsection
-
 
 @section('content')
 {{-- <p>本の名前を入力して検索できる。</p>
@@ -17,25 +16,35 @@
   </form> --}}
 
 {{-- DBの内容を表示 更新　削除のボタン併設--}}
-
   <table>
     <tr>
         <th>ID</th>
         <th>利用者名</th>
-        <th>人数</th>
-        <th>チェックイン時刻</th>
-        <th>チェックアウト時刻</th>
+        <th>住所</th>
+        <th>電話番号</th>
         <th>更新</th>
-        <th>削除</th>
     </tr>
-    @foreach ($items as $item)
-        <tr>
-          <td>{{$item ->book_id}}</td>
-          <td>{{$item ->user->guests_name}}</td>
-          <td>{{$item ->number_of_people}}</td>
-          <td>{{$item ->checkin_date}}</td>
-          <td>{{$item ->checkout_date}}</td>
-
+<form action="/hotel/guests/edit" method="POST">
+      @csrf
+      <input type="hidden" name="id" value="{{$form->guests_id}}">
+      <tr>
+          <th>name:</th>
+          <td><input type="text" name="guests_name" value="{{$form->guests_name}}"></td>
+      </tr>
+      <tr>
+          <th>address:</th>
+          <td><input type="text" name="guests_address" value="{{$form->guests_address}}"></td>
+      </tr>
+      <tr>
+          <th>tel:</th>
+          <td><input type="text" name="guests_tel" value="{{$form->guests_tel}}"></td>
+      </tr>
+      <tr>
+          <th></th>
+          <td><input type="submit" value="send"></td>
+      </tr>
+    </form>
+</table>
           {{-- <form action="book/edit" method="post">
             @csrf
             <td class="id">{{$item ->id}}</td>
@@ -53,7 +62,6 @@
               <input class="del" type="submit" value="削除する">
             </form></td> --}}
         </tr>
-    @endforeach
 </table>
 <table>
   
@@ -69,7 +77,7 @@
 @endif
 
 {{--追加フォーム--}}
-<form action="book\add" method="post">
+{{-- <form action="book\add" method="post">
   @csrf
   <tr>
     <td class="id"><input type="hidden" name="id"></td>
@@ -78,7 +86,7 @@
 </tr>
 </table>
       <input class="add" type="submit" value="追加ボタン">
-</form>
+</form> --}}
 
 
 @endsection
