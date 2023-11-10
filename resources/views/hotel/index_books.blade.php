@@ -31,7 +31,7 @@
     @foreach ($items as $item)
         <tr>
           <td>{{$item ->book_id}}</td>
-          <td>{{$item ->user->guests_name}}</td>
+          <td>{{$item ->guests->guests_name}}</td>
           <td>{{$item ->number_of_people}}</td>
           <td>{{$item ->checkin_date}}</td>
           <td>{{$item ->checkout_date}}</td>

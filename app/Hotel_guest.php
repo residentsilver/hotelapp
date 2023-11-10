@@ -17,8 +17,8 @@ class Hotel_guest extends Model
 // );
 
 
-// public function Hotel_books()
-// {
-//     return $this->hasMany('APP\Hotel_book');
-// }
+public function Hotel_books()
+{
+    return $this->hasMany('APP\Hotel_book','guests_id','guests_id');
+}
 }
