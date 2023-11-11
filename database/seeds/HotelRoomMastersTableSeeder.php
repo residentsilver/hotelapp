@@ -26,6 +26,12 @@ class HotelRoomMastersTableSeeder extends Seeder
         ];
         DB::table('hotel_room_masters')->insert($param);
 
+        $param =[
+            'room_type_id' =>3,
+            'room_name' =>'VIP',
+            'room_stay_people' =>8,
+        ];
+        DB::table('hotel_room_masters')->insert($param);
 
         
     }

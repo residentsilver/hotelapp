@@ -21,7 +21,7 @@ class CreateHotelRoomsTable extends Migration
                 ->on('hotel_room_masters')
                 ->onDelete('RESTRICT')
                 ->onUpdate('RESTRICT');
-            $table->integer('room_number');
+            $table->string('room_number');
             $table->timestamps();
         });
     }

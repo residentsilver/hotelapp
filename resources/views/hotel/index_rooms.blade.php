@@ -9,15 +9,7 @@
 
 
 @section('content')
-{{-- <p>部屋の名前を入力して検索できる。</p>
-<form action="/book/find" method="post">
-  @csrf
-  <input type="text" name="input" value="">
-  <input type="submit" value="find">
-  </form> --}}
-
-{{-- DBの内容を表示 更新　削除のボタン併設--}}
-
+{{-- DBの内容を表示--}}
   <table>
     <tr>
         <th>ID</th>
@@ -27,7 +19,7 @@
     @foreach ($items as $item)
         <tr>
           <td>{{$item ->room_id}}</td>
-          <td>{{$item ->user->room_name}}</td>
+          <td>{{$item ->rooms->room_name}}</td>
           <td>{{$item ->room_number}}</td>
         </tr>
     @endforeach

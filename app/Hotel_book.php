@@ -12,4 +12,10 @@ class Hotel_book extends Model
     public function guests(){
         return $this->belongsTo('App\Hotel_guest','guests_id','guests_id');
     }
+    // public function getData() 
+    // {
+    //     return $this->id.': '.$this->name.' ('.$this->price.')';
+    // }
+
+
 }

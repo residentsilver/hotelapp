@@ -8,7 +8,7 @@ class Hotel_room extends Model
 {
     protected $primaryKey = 'room_id';
 
-    public function user(){
+    public function rooms(){
         return $this->belongsTo('App\Hotel_room_master','room_type_id','room_type_id');
     }
 }

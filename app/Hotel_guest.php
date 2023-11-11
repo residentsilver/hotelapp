@@ -19,6 +19,19 @@ class Hotel_guest extends Model
 
 public function Hotel_books()
 {
-    return $this->hasMany('APP\Hotel_book','guests_id','guests_id');
+    return $this->hasMany('App\Hotel_book','guests_id','guests_id');
 }
+
+    //部分一致検索を有効化
+    public function scopeNameLike($query, $search)
+{
+    return $query->where('guests_name', 'like', '%' . $search . '%');
+}
+
+    // public function getData() 
+    // {
+    //     return $this->id.': '.$this->name.' ('.$this->price.')';
+    // }
+
+
 }
