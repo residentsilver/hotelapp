@@ -49,5 +49,6 @@ Route::post('hotel/rooms','HotelController@rooms_index');
 Route::get('hotel/room_masters','HotelController@masters_index');
 Route::post('hotel/room_masters','HotelController@masters_index');
 
+//details関連
 Route::get('hotel/details','HotelController@details_index');
 Route::post('hotel/details','HotelController@details_index');

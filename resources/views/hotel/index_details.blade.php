@@ -20,18 +20,29 @@
   <table>
     <tr>
         <th>ID</th>
-        <th>予約</th>
-        <th>部屋</th>
-        <th>宿泊日</th>
+        <th>利用者名</th>
+        <th>住所</th>
+        <th>電話番号</th>
+        <th>人数</th>
+        <th>部屋タイプ</th>
+        <th>部屋番号</th>
+        <th>チェックイン</th>
+        <th>チェックアウト</th>
         <th>宿泊料金</th>
     </tr>
     @foreach ($items as $item)
         <tr>
-          <td>{{$item ->book_id}}</td>
-          <td>{{$item ->book->book_id}}</td>
-          <td>{{$item ->room->room_id}}</td>
-          <td>{{$item ->stay_days}}</td>
+          <td>{{$item ->book_detail_id}}</td>
+          <td>{{$item ->book->guests->guests_name}}</td>
+          <td>{{$item ->book->guests->guests_address}}</td>
+          <td>{{$item ->book->guests->guests_tel}}</td>
+          <td>{{$item ->book->number_of_people}}</td>
+          <td>{{$item->room->rooms->room_name}}</td>
+          <td>{{$item->room->room_number}}</td>
+          <td>{{$item->book->checkin_date}}</td>
+          <td>{{$item->book->checkout_date}}</td>
           <td>{{$item ->stay_price}}</td>
+
         </tr>
     @endforeach
 </table>
