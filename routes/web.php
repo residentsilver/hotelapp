@@ -46,6 +46,10 @@ Route::post('hotel/books/del','HotelController@books_remove');
 Route::get('hotel/rooms','HotelController@rooms_index');
 Route::post('hotel/rooms','HotelController@rooms_index');
 
+//予約メソッド
+Route::get('hotel/rooms/book','HotelController@book_add');
+Route::post('hotel/rooms/book','HotelController@book_create');
+
 Route::get('hotel/room_masters','HotelController@masters_index');
 Route::post('hotel/room_masters','HotelController@masters_index');
 

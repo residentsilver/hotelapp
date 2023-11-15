@@ -43,8 +43,10 @@ class HotelController extends Controller
         return redirect('/hotel/guests');
     }
 
-
+//      return view('book.add');がわかっていない
     public function add(Request $request){
+        $number = Hotel_room_master::find($request ->room_number);
+        return view('hotel.index_rooms_book' , ['form' =>$number]);
         return view('book.add');
     }
 
@@ -130,12 +132,40 @@ public function rooms_index(Request $request)
     return view('hotel.index_rooms',['items' => $items]);//indexファイルへitems変数を送る。
 }
 
+//予約メソッド
+public function book_add(Request $request){
+    $books = Hotel_room::find($request ->id);
+    return view('hotel.index_rooms_book' , ['form' =>$books]);
+}
+
+//格納する情報を限定したい
+public function book_create(Request $request){
+    $details = new Hotel_book_details();
+    $books =new Hotel_book();
+    $form = $request->all();
+    unset($form['_token']);
+    $details->guests_id = $request->input('guests_id');
+    $details->number_of_people = $request->input('number_of_people');
+    $details->checkin_date = $request->input('chackin_date');
+    $details->checkout_Date = $request->input('checkout_date');
+    $details ->save();
+    $books->guests_id = $request->input('guests_id');
+    $books->number_of_people = $request->input('number_of_people');
+    $books->checkin_date = $request->input('chackin_date');
+    $books->checkout_Date = $request->input('checkout_date');
+    $books ->save();
+    return redirect('/hotel');//予約が完了しましたのページになるとよさそう
+}
+
+
 //hotel room masterモデル
 public function masters_index(Request $request)
 {
     $items = Hotel_room_master::all(); 
     return view('hotel.index_room_masters',['items' => $items]);//indexファイルへitems変数を送る。
 }
+
+
 
 //hotel book detailsモデル
 public function details_index(Request $request)

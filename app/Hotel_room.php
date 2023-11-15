@@ -12,6 +12,8 @@ class Hotel_room extends Model
         return $this->belongsTo('App\Hotel_room_master','room_type_id','room_type_id');
     }
 
+    
+
     public function book()
     {
         // belongsToMany(相手のモデル、中間テーブルの名前、中間テーブル上の相手のモデルの外部キー、中間テーブル上の自分のモデルの外部キー)

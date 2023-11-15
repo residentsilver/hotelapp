@@ -22,9 +22,7 @@
           <td>{{$item ->room_id}}</td>
           <td>{{$item ->rooms->room_name}}</td>
           <td>{{$item ->room_number}}</td>
-          <form action="" method="POST">
-          <td><input type="button" value="予約ボタン"></td>
-        </form>
+          <td><a href="/hotel/rooms/book?id={{$item ->room_id}}">予約ボタン</a></td>
         </tr>
     @endforeach
 </table>

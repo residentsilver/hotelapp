@@ -1,4 +1,4 @@
-@extends('layouts.helloapp')
+@extends('layouts.hotelapp')
 
 @section('title','Hotel.Add')
 
