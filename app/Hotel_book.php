@@ -8,6 +8,8 @@ class Hotel_book extends Model
 {
     protected $guarded = array('book_id');
     protected $primaryKey = 'book_id';
+    protected $dates = ['checkin_date', 'checkout_date'];
+
 
     public function guests(){
         return $this->belongsTo('App\Hotel_guest','guests_id','guests_id');

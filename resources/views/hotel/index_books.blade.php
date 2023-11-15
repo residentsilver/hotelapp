@@ -33,8 +33,8 @@
           <td>{{$item ->book_id}}</td>
           <td>{{$item ->guests->guests_name}}</td>
           <td>{{$item ->number_of_people}}</td>
-          <td>{{$item ->checkin_date}}</td>
-          <td>{{$item ->checkout_date}}</td>
+          <td>{{\Carbon\Carbon::parse($item->checkin_date)->format('Y-m-d')}}</td>
+            <td>{{\Carbon\Carbon::parse($item->checkout_date)->format('Y-m-d')}}</td>
           <td><a href="/hotel/books/edit?id={{$item ->book_id}}">更新</a></td>
           <td><a href="/hotel/books/del?id={{$item ->book_id}}">削除</a></td>
         </tr>

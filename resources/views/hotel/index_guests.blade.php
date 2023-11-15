@@ -37,7 +37,7 @@
             <table width="100%">
               <tr>
               @foreach($item->Hotel_books as $obj)
-                <td>{{$obj->checkin_date}}</td>
+              <td>{{ \Carbon\Carbon::parse($obj->checkin_date)->format('Y-m-d') }}</td>
               </tr>
               @endforeach
               </table>

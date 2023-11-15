@@ -24,8 +24,8 @@
                     <td>{{$form->book_id}}</td>
                     <td>{{$form->guests->guests_name}}</td>
                     <td>{{$form->number_of_people}}</td>
-                    <td>{{$form->checkin_date}}</td>
-                    <td>{{$form->checkout_date}}</td>
+                    <td>{{\Carbon\Carbon::parse($form->checkin_date)->format('Y-m-d')}}</td>
+            <td>{{\Carbon\Carbon::parse($form->checkout_date)->format('Y-m-d')}}</td>
                     <td><input type="submit" value="send"></td>
             </form>
         </tr>

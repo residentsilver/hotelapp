@@ -22,8 +22,8 @@ class CreateHotelBooksTable extends Migration
                 ->onDelete('RESTRICT')
                 ->onUpdate('RESTRICT');
             $table->integer('number_of_people');
-            $table->dateTime('checkin_date');
-            $table->dateTime('checkout_date');
+            $table->datetime('checkin_date');
+            $table->datetime('checkout_date');
             $table->timestamps();
         });
     }

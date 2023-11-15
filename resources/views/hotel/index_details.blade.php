@@ -39,8 +39,9 @@
           <td>{{$item ->book->number_of_people}}</td>
           <td>{{$item->room->rooms->room_name}}</td>
           <td>{{$item->room->room_number}}</td>
-          <td>{{$item->book->checkin_date}}</td>
-          <td>{{$item->book->checkout_date}}</td>
+          <td>{{ \Carbon\Carbon::parse($item->book->checkin_date)->format('Y-m-d') }}</td>
+<td>{{ \Carbon\Carbon::parse($item->book->checkout_date)->format('Y-m-d') }}</td>
+
           <td>{{$item ->stay_price}}</td>
 
         </tr>

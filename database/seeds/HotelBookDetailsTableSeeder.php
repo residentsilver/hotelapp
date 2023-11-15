@@ -23,10 +23,19 @@ class HotelBookDetailsTableSeeder extends Seeder
 
         $param =[
             'book_detail_id' =>2,
-            'book_id' =>1,
+            'book_id' =>2,
             'room_id' =>2,
             'stay_days' =>1,
             'stay_price' =>12000,
+        ];
+        DB::table('hotel_book_details')->insert($param);
+
+        $param =[
+            'book_detail_id' =>3,
+            'book_id' =>3,
+            'room_id' =>2,
+            'stay_days' =>3,
+            'stay_price' =>2000,
         ];
         DB::table('hotel_book_details')->insert($param);
     }

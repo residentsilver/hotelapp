@@ -38,6 +38,7 @@
         @csrf
   
         <tr>
+          <input type="hidden" name="room_id" value="{{$form->room_id}}">
             <td><input type="hidden" name="id"></td>
             <td><input type="number"name="guests_id"></td>
             <td>

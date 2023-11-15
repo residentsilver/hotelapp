@@ -140,21 +140,25 @@ public function book_add(Request $request){
 
 //格納する情報を限定したい
 public function book_create(Request $request){
-    $details = new Hotel_book_details();
+ 
     $books =new Hotel_book();
     $form = $request->all();
     unset($form['_token']);
-    $details->guests_id = $request->input('guests_id');
-    $details->number_of_people = $request->input('number_of_people');
-    $details->checkin_date = $request->input('chackin_date');
-    $details->checkout_Date = $request->input('checkout_date');
-    $details ->save();
     $books->guests_id = $request->input('guests_id');
     $books->number_of_people = $request->input('number_of_people');
-    $books->checkin_date = $request->input('chackin_date');
-    $books->checkout_Date = $request->input('checkout_date');
+    $books->checkin_date = $request->input('checkin_date');
+    $books->checkout_date = $request->input('checkout_date');
     $books ->save();
-    return redirect('/hotel');//予約が完了しましたのページになるとよさそう
+
+    $details = new Hotel_book_details();
+    // $details->book_id = $request->input('book_id');
+    $details->book_id = $books->book_id;
+    $details->room_id = $request->input('room_id');
+    $details->stay_days =$books->checkout_date->diffInDays($books->checkin_date) ;
+    $details->stay_price =  $books->book_id;//stay_priceをと決めておく必要あり
+    $details ->save();
+
+    return redirect('/hotel/books');//予約が完了しましたのページになるとよさそう
 }
 
 

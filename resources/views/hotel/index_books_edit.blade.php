@@ -28,10 +28,10 @@
             <input type="text" name="number_of_people" value="{{$form ->number_of_people}}">
           </td>
           <td>
-            <input type="datetime" name="checkin_date" value="{{$form ->checkin_date}}">
+            <input type="date" name="checkin_date" value="{{$form ->checkin_date}}">
           </td>
           <td>
-            <input type="datetime" name="checkout_date" value="{{$form ->checkout_date}}">
+            <input type="date" name="checkout_date" value="{{$form ->checkout_date}}">
           </td>
           <td><input type="submit" value="send"></td>
     </form>

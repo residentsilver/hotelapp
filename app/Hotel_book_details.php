@@ -8,6 +8,10 @@ class Hotel_book_details extends Model
 {
 
     protected $primaryKey = 'book_detail_id';
+    protected $dateFormat = 'Y-m-d';
+    protected $dates = ['checkin_date', 'checkout_date'];
+
+
 
     public function book(){
         return $this->belongsTo('App\Hotel_book','book_id','book_id');
