@@ -145,4 +145,11 @@ public function details_index(Request $request)
 }
 
 
+//bootstrap練習
+public function a(Request $request)
+{
+    // $request->input('search'); 
+    return view('hotel.a');
+}
+
 }

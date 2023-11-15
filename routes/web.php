@@ -52,3 +52,7 @@ Route::post('hotel/room_masters','HotelController@masters_index');
 //details関連
 Route::get('hotel/details','HotelController@details_index');
 Route::post('hotel/details','HotelController@details_index');
+
+//bootstrap練習
+Route::get('hotel/a','HotelController@a');
+Route::post('hotel/a','HotelController@a');

@@ -15,12 +15,16 @@
         <th>ID</th>
         <th>部屋タイプ</th>
         <th>部屋番号</th>
+        <th>予約</th>
     </tr>
     @foreach ($items as $item)
         <tr>
           <td>{{$item ->room_id}}</td>
           <td>{{$item ->rooms->room_name}}</td>
           <td>{{$item ->room_number}}</td>
+          <form action="" method="POST">
+          <td><input type="button" value="予約ボタン"></td>
+        </form>
         </tr>
     @endforeach
 </table>
