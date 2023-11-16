@@ -1,5 +1,11 @@
 @extends('layouts.hotelapp')
 
+<style>
+  .btn-lg{
+    margin-left:60%;
+  }
+</style>
+
 @section('title','Hotel.index')
 
 @section('menubar')
@@ -44,8 +50,8 @@
               @endif
           </td>
 
-          <td><a href="/hotel/guests/edit?id={{$item ->guests_id}}">更新</a></td>
-          <td><a href="/hotel/guests/del?id={{$item ->guests_id}}">削除</a></td>
+          <td ><a href="/hotel/guests/edit?id={{$item ->guests_id}}">更新</a></td>
+          <td   ><a href="/hotel/guests/del?id={{$item ->guests_id}}">削除</a></td>
         </tr>
     @endforeach
 </table>
@@ -72,7 +78,7 @@
     <td><input type="text" name="guests_tel" value="{{old('guests_tel')}}"></td>
 </tr>
 </table>
-      <input class="add" type="submit" value="追加ボタン">
+      <input class="btn btn-primary btn-lg" class="add" type="submit" value="追加ボタン">
 </form>
 
 

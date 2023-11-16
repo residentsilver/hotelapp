@@ -171,12 +171,21 @@ public function masters_index(Request $request)
 
 
 
-//hotel book detailsモデル
+//hotel book detailsモデル ではない。
 public function details_index(Request $request)
 {
-    $items = Hotel_book_details::all(); 
+    $items = Hotel_book::all(); 
     return view('hotel.index_details',['items' => $items]);//indexファイルへitems変数を送る。
 }
+
+//ddによるデバッグ
+public function details_index1(Request $request)
+{
+    $items = Hotel_book::all(); 
+    dd($items[0]->room);
+    return view('hotel.index_details',['items' => $items]);//indexファイルへitems変数を送る。
+}
+
 
 
 //bootstrap練習
@@ -185,5 +194,53 @@ public function a(Request $request)
     // $request->input('search'); 
     return view('hotel.a');
 }
+
+
+
+
+//template
+public function index(Request $request)
+{
+    return view('template.index');
+}
+
+public function about(Request $request)
+{
+    return view('template.about');
+}
+
+public function events(Request $request)
+{
+    return view('template.events');
+}
+
+public function reservation(Request $request)
+{
+    return view('template.reservation');
+}
+
+public function blog_grid(Request $request)
+{
+    return view('template.blog-grid');
+}
+
+public function blog_single(Request $request)
+{
+    return view('template.blog-single');
+}
+
+public function contact(Request $request)
+{
+    return view('template.contact');
+}
+
+public function rooms(Request $request)
+{
+    return view('template.rooms');
+}
+
+
+
+
 
 }

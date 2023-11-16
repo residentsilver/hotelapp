@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>@yield('title')</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <style>
     body {font-size: 16pt; 
         color: #999; 

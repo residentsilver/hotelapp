@@ -31,23 +31,23 @@
         <th>宿泊料金</th>
     </tr>
     @foreach ($items as $item)
+    @foreach($item->room as $room)
         <tr>
-          <td>{{$item ->book_detail_id}}</td>
-          <td>{{$item ->book->guests->guests_name}}</td>
-          <td>{{$item ->book->guests->guests_address}}</td>
-          <td>{{$item ->book->guests->guests_tel}}</td>
-          <td>{{$item ->book->number_of_people}}</td>
-          <td>{{$item->room->rooms->room_name}}</td>
-          <td>{{$item->room->room_number}}</td>
-          <td>{{ \Carbon\Carbon::parse($item->book->checkin_date)->format('Y-m-d') }}</td>
-<td>{{ \Carbon\Carbon::parse($item->book->checkout_date)->format('Y-m-d') }}</td>
-
-          <td>{{$item ->stay_price}}</td>
-
+          {{$room}}
+          <td>{{$room->pivot->book_detail_id}}</td>
+          <td>{{$item ->guests->guests_name}}</td>
+          <td>{{$item ->guests->guests_address}}</td>
+          <td>{{$item ->guests->guests_tel}}</td>
+          <td>{{$item ->number_of_people}}</td>
+          <td>{{$room ->rooms->room_name}}</td>
+          <td>{{$room ->room_number}}</td>
+          <td>{{ \Carbon\Carbon::parse($item->checkin_date)->format('Y-m-d') }}</td>
+          <td>{{ \Carbon\Carbon::parse($item->checkout_date)->format('Y-m-d') }}</td>
+          <td>{{$room ->pivot->stay_price}}</td>
         </tr>
+        @endforeach
     @endforeach
-</table>
-</table>
+  </table>
   {{-- validateしている --}}
 @if (count($errors) >0)
   <div>

@@ -17,7 +17,14 @@ class Hotel_room extends Model
 
     public function book()
     {
-        // belongsToMany(相手のモデル、中間テーブルの名前、中間テーブル上の相手のモデルの外部キー、中間テーブル上の自分のモデルの外部キー)
-        return $this->belongsToMany('App\Hotel_book','hotel_book_details','room_id','book_id');
+        // belongsToMany(相手のモデル、中間テーブルの名前、中間テーブル上の相手のモデルの外部キー、中間テーブル上の自分のモデルの外部キー) 編集前
+        return $this->belongsToMany('App\Hotel_book','hotel_book_details','book_id','room_id')->withPivot('stay_days','stay_price');
     }
+
+    // public function book()
+    // {
+    //     // belongsToMany(相手のモデル、中間テーブルの名前、中間テーブル上の相手のモデルの外部キー、中間テーブル上の自分のモデルの外部キー)　編集後
+    //     return $this->belongsToMany('App\Hotel_book','hotel_book_details','room_id','book_id');
+    //     // ->withPivot('stay_days','stay_price');
+    // }
 }
