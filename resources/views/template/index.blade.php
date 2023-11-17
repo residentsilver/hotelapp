@@ -47,11 +47,11 @@
                     <div class="col-md-6 mx-auto">
                       <ul class="list-unstyled menu">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="rooms.html">Rooms</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="/rooms">Rooms</a></li>
+                        <li><a href="/guests">Guests</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/books-details">Books details</a></li>
+                        <li><a href="/books">Reservation</a></li>
                       </ul>
                     </div>
                   </div>

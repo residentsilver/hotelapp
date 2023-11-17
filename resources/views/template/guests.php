@@ -29,7 +29,7 @@
     <header class="site-header js-site-header">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.html">Sogo Hotel</a></div>
+          <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="/index">Sogo Hotel</a></div>
           <div class="col-6 col-lg-8">
 
 
@@ -46,12 +46,12 @@
                   <div class="row full-height align-items-center">
                     <div class="col-md-6 mx-auto">
                       <ul class="list-unstyled menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="rooms.html">Rooms</a></li>
-                        <li class="active"><a href="about.html">About</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="/index">Home</a></li>
+                        <li><a href="/rooms">Rooms</a></li>
+                        <li class="active"><a href="guests">About</a></li>
+                        <li><a href="/room-master">Events</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/books">Reservation</a></li>
                       </ul>
                     </div>
                   </div>
@@ -70,7 +70,7 @@
           <div class="col-md-10 text-center" data-aos="fade">
             <h1 class="heading mb-3">About Us</h1>
             <ul class="custom-breadcrumbs mb-4">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="/index">Home</a></li>
               <li>&bullet;</li>
               <li>About</li>
             </ul>
@@ -97,107 +97,21 @@
           </div>
           <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
             <h2 class="heading">Welcome!</h2>
-            <p class="mb-4">ここに何かを記入する</p>
-            <p><a href="#" class="btn btn-primary text-white py-2 mr-3">Learn More</a> <span class="mr-3 font-family-serif"><em>or</em></span> <a href="https://vimeo.com/channels/staffpicks/93951774"  data-fancybox class="text-uppercase letter-spacing-1">See video</a></p>
+            <p class="mb-4">当ホテルについて</p>
           </div>
           
         </div>
       </div>
     </section>
 
-    <div class="container section">
 
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-7 mb-5">
-          <h2 class="heading" data-aos="fade-up">Leadership</h2>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="block-2">
-            <div class="flipper">
-              <div class="front" style="background-image: url(images/person_3.jpg);">
-                <div class="box">
-                  <h2>Will Peters</h2>
-                  <p>President</p>
-                </div>
-              </div>
-              <div class="back">
-                <!-- back content -->
-                <blockquote>
-                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
-                </blockquote>
-                <div class="author d-flex">
-                  <div class="image mr-3 align-self-center">
-                    <img src="images/person_3.jpg" alt="">
-                  </div>
-                  <div class="name align-self-center">Will Peters <span class="position">President</span></div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- .flip-container -->
-        </div>
-
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="block-2"> <!-- .hover -->
-            <div class="flipper">
-              <div class="front" style="background-image: url(images/person_1.jpg);">
-                <div class="box">
-                  <h2>Jane Williams</h2>
-                  <p>Business Manager</p>
-                </div>
-              </div>
-              <div class="back">
-                <!-- back content -->
-                <blockquote>
-                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
-                </blockquote>
-                <div class="author d-flex">
-                  <div class="image mr-3 align-self-center">
-                    <img src="images/person_1.jpg" alt="">
-                  </div>
-                  <div class="name align-self-center">Jane Williams <span class="position">Business Manager</span></div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- .flip-container -->
-        </div>
-
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="block-2">
-            <div class="flipper">
-              <div class="front" style="background-image: url(images/person_2.jpg);">
-                <div class="box">
-                  <h2>Jeffrey Neddery</h2>
-                  <p>Marketing Director</p>
-                </div>
-              </div>
-              <div class="back">
-                <!-- back content -->
-                <blockquote>
-                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
-                </blockquote>
-                <div class="author d-flex">
-                  <div class="image mr-3 align-self-center">
-                    <img src="images/person_2.jpg" alt="">
-                  </div>
-                  <div class="name align-self-center">Jeffrey Neddery <span class="position">Marketing Director</span></div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- .flip-container -->
-        </div>
-      </div>
-    </div>
-    <!-- END .block-2 -->
 
     <section class="section slider-section bg-light">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-7">
-            <h2 class="heading" data-aos="fade-up">Photos</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <h2 class="heading" data-aos="fade-up">写真例</h2>
+            <p data-aos="fade-up" data-aos-delay="100">洋室のお部屋を紹介しています。</p>
           </div>
         </div>
         <div class="row">
@@ -233,7 +147,7 @@
     </section>
     <!-- END section -->
 
-    <div class="section">
+    <!-- <div class="section">
       <div class="container">
 
         <div class="row justify-content-center text-center mb-5">
@@ -268,7 +182,7 @@
         
 
       </div>
-    </div>
+    </div> -->
 
     
     
@@ -279,7 +193,7 @@
               <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
             </div>
             <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
+              <a href="/book" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
             </div>
           </div>
         </div>

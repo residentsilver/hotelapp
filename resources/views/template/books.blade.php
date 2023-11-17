@@ -29,7 +29,7 @@
     <header class="site-header js-site-header">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.html">Sogo Hotel</a></div>
+          <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="/index">Sogo Hotel</a></div>
           <div class="col-6 col-lg-8">
 
 
@@ -46,12 +46,12 @@
                   <div class="row full-height align-items-center">
                     <div class="col-md-6 mx-auto">
                       <ul class="list-unstyled menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="rooms.html">Rooms</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li class="active"><a href="reservation.html">Reservation</a></li>
+                        <li><a href="/index">Home</a></li>
+                        <li><a href="/rooms">Rooms</a></li>
+                        <li><a href="/guests">About</a></li>
+                        <li><a href="/room-master">Events</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li class="active"><a href="/books">Reservation</a></li>
                       </ul>
                     </div>
                   </div>
@@ -70,7 +70,7 @@
           <div class="col-md-10 text-center" data-aos="fade">
             <h1 class="heading mb-3">Reservation Form</h1>
             <ul class="custom-breadcrumbs mb-4">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="/index">Home</a></li>
               <li>&bullet;</li>
               <li>Reservation</li>
             </ul>
@@ -268,7 +268,7 @@
               <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
             </div>
             <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
+              <a href="/books" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
             </div>
           </div>
         </div>

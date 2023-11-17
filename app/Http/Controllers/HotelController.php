@@ -8,6 +8,7 @@ use App\Hotel_guest;
 use App\Hotel_room;
 use App\Hotel_room_master;
 use Illuminate\Http\Request;
+use PHPUnit\Framework\MockObject\Stub\ReturnReference;
 
 class HotelController extends Controller
 {
@@ -198,49 +199,17 @@ public function a(Request $request)
 
 
 
-//template
-public function index(Request $request)
-{
-    return view('template.index');
-}
 
-public function about(Request $request)
-{
-    return view('template.about');
-}
+//セッションコントローラ
+// public function ses_get(Request $request){
+//     $sesdata = $request->session()->get('msg');
+//     return view('hotel.session'),['session_data' =>$sesdata];
+// }
 
-public function events(Request $request)
-{
-    return view('template.events');
-}
-
-public function reservation(Request $request)
-{
-    return view('template.reservation');
-}
-
-public function blog_grid(Request $request)
-{
-    return view('template.blog-grid');
-}
-
-public function blog_single(Request $request)
-{
-    return view('template.blog-single');
-}
-
-public function contact(Request $request)
-{
-    return view('template.contact');
-}
-
-public function rooms(Request $request)
-{
-    return view('template.rooms');
-}
-
-
-
-
+// public function ses_put(Request $request){
+//     $msg = $request->input;
+//     $request ->session()->put('msg',$msg);
+//     return redirect('hotel/session');
+// }
 
 }

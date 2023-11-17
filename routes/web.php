@@ -58,35 +58,41 @@ Route::get('hotel/details','HotelController@details_index');
 Route::post('hotel/details','HotelController@details_index');
 Route::get('hotel/detail','HotelController@details_index1');
 
+//セッション関連
+Route::get('hotel/session','HotelController@ses_get');
+Route::post('hotel/session','HotelController@ses_put');
+
+
+
 //bootstrap練習
 Route::get('hotel/a','HotelController@a');
 Route::post('hotel/a','HotelController@a');
 
 
 //template関連
-Route::get('index','HotelController@index');
-Route::post('index','HotelController@index');
+Route::get('index','TemplateController@index');
+Route::post('index','TemplateController@index');
 
-Route::get('events','HotelController@agent_single');
-Route::post('events','HotelController@agent_single');
+Route::get('room-master','TemplateController@room_master');
+Route::post('room-master','TemplateController@room_master');
 
-Route::get('reservation','HotelController@reservation');
-Route::post('reservation','HotelController@reservation');
+Route::get('books','TemplateController@books');
+Route::post('books','TemplateController@books');
 
-Route::get('rooms','HotelController@rooms');
-Route::post('rooms','HotelController@rooms');
+Route::get('rooms','TemplateController@rooms');
+Route::post('rooms','TemplateController@rooms');
 
-Route::get('blog-single','HotelController@blog_single');
-Route::post('blog-single','HotelController@blog_single');
+Route::get('books-details','TemplateController@blog_single');
+Route::post('books-details','TemplateController@blog_single');
 
-Route::get('contact','HotelController@contact');
-Route::post('contact','HotelController@contact');
+Route::get('contact','TemplateController@contact');
+Route::post('contact','TemplateController@contact');
 
-Route::get('property-grid','HotelController@property_grid');
-Route::post('property-grid','HotelController@property_grid');
+Route::get('property-grid','TemplateController@property_grid');
+Route::post('property-grid','TemplateController@property_grid');
 
-Route::get('property-single','HotelController@property_single');
-Route::post('property-single','HotelController@property_single');
+Route::get('property-single','TemplateController@property_single');
+Route::post('property-single','TemplateController@property_single');
 
-Route::get('about','HotelController@about');
-Route::post('about','HotelController@about');
+Route::get('guests','TemplateController@guests');
+Route::post('guests','TemplateController@guests');

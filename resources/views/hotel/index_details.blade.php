@@ -31,8 +31,8 @@
         <th>宿泊料金</th>
     </tr>
     @foreach ($items as $item)
-    @dd($item->room)
-    {{$item->room}}
+    {{-- @dd($item->room)
+    {{$item->room}} --}}
     @foreach($item->room as $room)
         <tr>
           <td>{{$room->pivot->book_detail_id}}</td>
