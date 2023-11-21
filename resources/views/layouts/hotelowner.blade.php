@@ -67,7 +67,7 @@
 </style>
 </head>
 <body>
-    <h1><a href="/hotel/books">ホテルページ</a></h1>
+    <h1><a href="/hotel/rooms">ホテルページ</a></h1>
 
     @section('menubar')
 

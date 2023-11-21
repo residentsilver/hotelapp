@@ -14,6 +14,12 @@
 @endsection
 
 @section('content')
+@if(Auth::check())
+<p>ログインユーザ: {{$user->name . '('. $user->email . ')'}}</p>
+
+@else
+@endif
+
 <p>登録者の名前を入力して検索できる。</p>
 <form action="/hotel/guests/find" method="post">
   @csrf
@@ -21,11 +27,7 @@
   <input type="submit" value="find">
   </form>
 
-  @if(Auth::check())
-<p>ログインユーザ: {{$user->name . '('. $user->email . ')'}}</p>
 
-@else
-@endif
 {{-- DBの内容を表示 更新　削除のボタン併設--}}
   <table>
     <tr>
