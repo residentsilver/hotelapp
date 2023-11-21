@@ -1,4 +1,4 @@
-@extends('layouts.hotelapp')
+@extends('layouts.hotelowner')
 @section('title','Hotel.books')
 
 @section('menubar')
@@ -14,7 +14,11 @@
   <input type="text" name="input" value="">
   <input type="submit" value="find">
   </form> --}}
-
+  @if(Auth::check())
+  <p>ログインユーザ: {{$user->name . '('. $user->email . ')'}}</p>
+  
+  @else
+  @endif
 {{-- DBの内容を表示 更新　削除のボタン併設--}}
 
   <table>

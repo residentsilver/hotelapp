@@ -1,4 +1,4 @@
-@extends('layouts.hotelapp')
+@extends('layouts.hotelowner')
 
 @section('title','Hotel.index')
 
@@ -9,8 +9,12 @@
 
 
 @section('content')
-{{-- DBの内容を表示 --}}
+@if(Auth::check())
+<p>ログインユーザ: {{$user->name . '('. $user->email . ')'}}</p>
 
+@else
+@endif
+{{-- DBの内容を表示 --}}
   <table>
     <tr>
         <th>ID</th>

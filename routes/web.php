@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 //hotel_guests関連
-Route::get('hotel/guests','HotelController@guests_index');
+Route::get('hotel/guests','HotelController@guests_index')->middleware('auth');
 Route::post('hotel/guests','HotelController@guests_index');
 
 Route::get('hotel/guests/edit','HotelController@edit'); 
@@ -32,7 +32,7 @@ Route::get('hotel/guests/find','HotelController@find');
 Route::post('hotel/guests/find','HotelController@search');
 
 //hotel_books関連
-Route::get('hotel/books','HotelController@books_index');
+Route::get('hotel/books','HotelController@books_index')->middleware('auth');
 Route::post('hotel/books','HotelController@books_index');
 
 Route::get('hotel/books/edit','HotelController@books_edit');
@@ -50,13 +50,18 @@ Route::post('hotel/rooms','HotelController@rooms_index');
 Route::get('hotel/rooms/book','HotelController@book_add');
 Route::post('hotel/rooms/book','HotelController@book_create');
 
-Route::get('hotel/room_masters','HotelController@masters_index');
+Route::get('hotel/room_masters','HotelController@masters_index')->middleware('auth');
 Route::post('hotel/room_masters','HotelController@masters_index');
 
 //details関連
 Route::get('hotel/details','HotelController@details_index');
 Route::post('hotel/details','HotelController@details_index');
 Route::get('hotel/detail','HotelController@details_index1');
+
+
+//管理者画面
+Route::get('hotel/index','HotelController@index1');
+Route::post('hotel/index','HotelController@index1');
 
 //セッション関連
 Route::get('hotel/session','HotelController@ses_get');
@@ -96,3 +101,11 @@ Route::post('property-single','TemplateController@property_single');
 
 Route::get('guests','TemplateController@guests');
 Route::post('guests','TemplateController@guests');
+
+
+//認証関連
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/logout', 'HomeController@index')->name('home');

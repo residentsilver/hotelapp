@@ -67,12 +67,15 @@
 </style>
 </head>
 <body>
-    <h1><a href="/hotel">ホテルページ</a></h1>
+    <h1><a href="/hotel/books">ホテルページ</a></h1>
 
     @section('menubar')
+
     <div style="display: flex" >
-    <a href="/hotel/rooms">部屋一覧</a>
-    <a href="/hotel/details">予約明細</a>
+    <a href="/hotel/index">管理者トップ</a>
+    <a href="/hotel/guests">利用者一覧</a>
+    <a href="/hotel/books">予約一覧</a>
+    <a href="/hotel/room_masters">部屋マスター</a>
     <a href="/login">ログイン</a>
     <div>
         <a href="{{ route('logout') }}"

@@ -7,7 +7,9 @@ use App\Hotel_book_details;
 use App\Hotel_guest;
 use App\Hotel_room;
 use App\Hotel_room_master;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use PHPUnit\Framework\MockObject\Stub\ReturnReference;
 
 class HotelController extends Controller
@@ -16,8 +18,12 @@ class HotelController extends Controller
 //hotel guestモデル
     public function guests_index(Request $request)
     {
+        $user =Auth::user();
+        $sort =$request->sort;
+        $items = User::all();
+        $param =['items' =>$items,'sort'=>$sort,'user' =>$user];
         $items = Hotel_guest::all(); 
-        return view('hotel.index_guests',['items' => $items]);//indexファイルへitems変数を送る。
+        return view('hotel.index_guests',['items' => $items],$param);//indexファイルへitems変数を送る。
     }
 
     public function edit(Request $request){
@@ -81,8 +87,12 @@ class HotelController extends Controller
 //hotel booksモデル
     public function books_index(Request $request)
     {
+        $user =Auth::user();
+        $sort =$request->sort;
+        $items = User::all();
+        $param =['items' =>$items,'sort'=>$sort,'user' =>$user];
         $items = Hotel_book::all(); 
-        return view('hotel.index_books',['items' => $items]);//indexファイルへitems変数を送る。
+        return view('hotel.index_books',['items' => $items],$param);//indexファイルへitems変数を送る。
     }
 
     public function books_edit(Request $request){
@@ -166,8 +176,12 @@ public function book_create(Request $request){
 //hotel room masterモデル
 public function masters_index(Request $request)
 {
+    $user =Auth::user();
+    $sort =$request->sort;
+    $items = User::all();
+    $param =['items' =>$items,'sort'=>$sort,'user' =>$user];
     $items = Hotel_room_master::all(); 
-    return view('hotel.index_room_masters',['items' => $items]);//indexファイルへitems変数を送る。
+    return view('hotel.index_room_masters',['items' => $items],$param);//indexファイルへitems変数を送る。
 }
 
 
@@ -187,7 +201,15 @@ public function details_index1(Request $request)
     return view('hotel.index_details',['items' => $items]);//indexファイルへitems変数を送る。
 }
 
-
+//管理者画面
+public function index1(Request $request)
+{
+    $user =Auth::user();
+    $sort =$request->sort;
+    $items = User::all();
+    $param =['items' =>$items,'sort'=>$sort,'user' =>$user];
+    return view('hotel.index',$param);//indexファイルへitems変数を送る。
+}
 
 //bootstrap練習
 public function a(Request $request)
@@ -196,7 +218,10 @@ public function a(Request $request)
     return view('hotel.a');
 }
 
+//認証関連
+public function index(Request $request){
 
+}
 
 
 

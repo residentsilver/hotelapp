@@ -1,4 +1,4 @@
-@extends('layouts.hotelapp')
+@extends('layouts.hotelowner')
 
 <style>
   .btn-lg{
@@ -21,6 +21,11 @@
   <input type="submit" value="find">
   </form>
 
+  @if(Auth::check())
+<p>ログインユーザ: {{$user->name . '('. $user->email . ')'}}</p>
+
+@else
+@endif
 {{-- DBの内容を表示 更新　削除のボタン併設--}}
   <table>
     <tr>
