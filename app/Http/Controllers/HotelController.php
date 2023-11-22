@@ -15,6 +15,11 @@ use PHPUnit\Framework\MockObject\Stub\ReturnReference;
 class HotelController extends Controller
 {
 
+//利用者メニュー
+public function menu(Request $request){
+    return view('hotel.index_hotel');
+}
+
 //hotel guestモデル
     public function guests_index(Request $request)
     {

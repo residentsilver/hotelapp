@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//hotel利用者メニュー
+Route::get('hotel','HotelController@menu');
+Route::post('hotel','HotelController@menu');
+
+
 //hotel_guests関連
 Route::get('hotel/guests','HotelController@guests_index')->middleware('auth');
 Route::post('hotel/guests','HotelController@guests_index');
