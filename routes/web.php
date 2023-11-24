@@ -46,6 +46,10 @@ Route::post('hotel/books/edit','HotelController@books_update');
 Route::get('hotel/books/del','HotelController@books_delete');
 Route::post('hotel/books/del','HotelController@books_remove');
 
+Route::get('hotel/books/search','HotelController@books_search');
+Route::post('hotel/books/search','HotelController@books_search');
+
+
 //hotel_rooms関連
 
 Route::get('hotel/rooms','HotelController@rooms_index');

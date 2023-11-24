@@ -11,6 +11,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PHPUnit\Framework\MockObject\Stub\ReturnReference;
+use Carbon\Carbon;
 
 class HotelController extends Controller
 {
@@ -105,6 +106,26 @@ public function menu(Request $request){
         return view('hotel.index_books_edit' , ['form' =>$books]);
 }
 
+public function books_search(Request $request)
+{
+    $user =Auth::user();
+    $sort =$request->sort;
+    $items = User::all();
+    $param =['items' =>$items,'sort'=>$sort,'user' =>$user];
+    switch ($request->selected_option) {
+        case 'last_month':
+            $items = Hotel_book::whereMonth('checkin_date', '=', Carbon::now()->subMonth()->month)->get();
+            break;
+        case 'two_months_ago':
+            $items = Hotel_book::whereMonth('checkin_date', '=', Carbon::now()->subMonths(2)->month)->get();
+            break;
+        default:
+            // デフォルトは当月
+            $items = Hotel_book::whereMonth('checkin_date', '=', Carbon::now()->month)->get();
+            break;
+    }
+    return view('hotel.index_books',['items' => $items],$param);//indexファイルへitems変数を送る。
+}
 
 
 //こっちの更新は、すべての情報を書き換えている

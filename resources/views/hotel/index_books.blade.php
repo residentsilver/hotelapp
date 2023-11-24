@@ -45,15 +45,18 @@
     @endforeach
 </table>
 
-<form action="post">
-<label class="selectbox-002">
-  <select>
-      <option>optionの例1</option>
-      <option>optionの例2</option>
-      <option>optionの例3</option>
-  </select>
-</label>
-<input type="submit" value="確認する">
+<form action="/hotel/books/search" method="post">
+  @csrf
+
+  <label class="selectbox-002">
+      <select name="selected_option"> <!-- name属性を追加 -->
+          <option value="this_month">当月の情報を取得</option> <!-- value属性を追加 -->
+          <option value="last_month">先月の情報を取得</option>
+          <option value="two_months_ago">先々月の情報を取得</option>
+      </select>
+  </label>
+  
+  <input type="submit" value="確認する">
 </form>
   
   <!-- {{-- validateしている --}}
