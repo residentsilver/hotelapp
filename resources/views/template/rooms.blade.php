@@ -33,14 +33,14 @@
             <form action="#">
               <div class="row">
                 <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-                  <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
+                  <label for="checkin_date" class="font-weight-bold text-black">チェックイン</label>
                   <div class="field-icon-wrap">
                     <div class="icon"><span class="icon-calendar"></span></div>
                     <input type="text" id="checkin_date" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-                  <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
+                  <label for="checkout_date" class="font-weight-bold text-black">チェックアウト</label>
                   <div class="field-icon-wrap">
                     <div class="icon"><span class="icon-calendar"></span></div>
                     <input type="text" id="checkout_date" class="form-control">
@@ -49,7 +49,7 @@
                 <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
                   <div class="row">
                     <div class="col-md-6 mb-3 mb-md-0">
-                      <label for="adults" class="font-weight-bold text-black">Adults</label>
+                      <label for="adults" class="font-weight-bold text-black">大人</label>
                       <div class="field-icon-wrap">
                         <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                         <select name="" id="adults" class="form-control">
@@ -61,7 +61,8 @@
                       </div>
                     </div>
                     <div class="col-md-6 mb-3 mb-md-0">
-                      <label for="children" class="font-weight-bold text-black">Children</label>
+                      <label for="children" class="font-weight-bold text-black">子供
+                      </label>
                       <div class="field-icon-wrap">
                         <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                         <select name="" id="children" class="form-control">
@@ -98,7 +99,7 @@
               </figure>
               <div class="p-3 text-center room-info">
                 <h2>Single Room</h2>
-                <span class="text-uppercase letter-spacing-1">90$ / per night</span>
+                <span class="text-uppercase letter-spacing-1">9,000円</span>
               </div>
             </a>
           </div>
@@ -110,7 +111,7 @@
               </figure>
               <div class="p-3 text-center room-info">
                 <h2>Family Room</h2>
-                <span class="text-uppercase letter-spacing-1">120$ / per night</span>
+                <span class="text-uppercase letter-spacing-1">12,000円</span>
               </div>
             </a>
           </div>
@@ -122,7 +123,7 @@
               </figure>
               <div class="p-3 text-center room-info">
                 <h2>Presidential Room</h2>
-                <span class="text-uppercase letter-spacing-1">250$ / per night</span>
+                <span class="text-uppercase letter-spacing-1">2,500円</span>
               </div>
             </a>
           </div>
@@ -134,7 +135,7 @@
               </figure>
               <div class="p-3 text-center room-info">
                 <h2>Single Room</h2>
-                <span class="text-uppercase letter-spacing-1">90$ / per night</span>
+                <span class="text-uppercase letter-spacing-1">9,000円</span>
               </div>
             </a>
           </div>
@@ -146,7 +147,7 @@
               </figure>
               <div class="p-3 text-center room-info">
                 <h2>Family Room</h2>
-                <span class="text-uppercase letter-spacing-1">120$ / per night</span>
+                <span class="text-uppercase letter-spacing-1">12,000円</span>
               </div>
             </a>
           </div>
@@ -158,7 +159,7 @@
               </figure>
               <div class="p-3 text-center room-info">
                 <h2>Presidential Room</h2>
-                <span class="text-uppercase letter-spacing-1">250$ / per night</span>
+                <span class="text-uppercase letter-spacing-1">2,500円</span>
               </div>
             </a>
           </div>
@@ -172,26 +173,26 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-7">
-            <h2 class="heading" data-aos="fade">Great Offers</h2>
-            <p data-aos="fade">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <h2 class="heading" data-aos="fade">特別価格</h2>
+
           </div>
         </div>
       
         <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="100">
           <a href="#" class="image d-block bg-image-2" style="background-image: url('images/img_1.jpg');"></a>
           <div class="text">
-            <span class="d-block mb-4"><span class="display-4 text-primary">$199</span> <span class="text-uppercase letter-spacing-2">/ per night</span> </span>
+            <span class="d-block mb-4"><span class="display-4 text-primary">1,999円</span> <span class="text-uppercase letter-spacing-2">/ １泊</span> </span>
             <h2 class="mb-4">Family Room</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p>
             <p><a href="#" class="btn btn-primary text-white">Book Now</a></p>
           </div>
         </div>
         <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="200">
           <a href="#" class="image d-block bg-image-2 order-2" style="background-image: url('images/img_2.jpg');"></a>
           <div class="text order-1">
-            <span class="d-block mb-4"><span class="display-4 text-primary">$299</span> <span class="text-uppercase letter-spacing-2">/ per night</span> </span>
+            <span class="d-block mb-4"><span class="display-4 text-primary">2,999円</span> <span class="text-uppercase letter-spacing-2">/１泊</span> </span>
             <h2 class="mb-4">Presidential Room</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p></p>
             <p><a href="#" class="btn btn-primary text-white">Book Now</a></p>
           </div>
         </div>

@@ -3,7 +3,7 @@
 
 @section('menubar')
     @parent
-    予約内容を表示
+    本日の予約内容を表示
 @endsection
 
 
@@ -38,13 +38,23 @@
           <td>{{$item ->guests->guests_name}}</td>
           <td>{{$item ->number_of_people}}</td>
           <td>{{\Carbon\Carbon::parse($item->checkin_date)->format('Y-m-d')}}</td>
-            <td>{{\Carbon\Carbon::parse($item->checkout_date)->format('Y-m-d')}}</td>
+          <td>{{\Carbon\Carbon::parse($item->checkout_date)->format('Y-m-d')}}</td>
           <td><a href="/hotel/books/edit?id={{$item ->book_id}}">更新</a></td>
           <td><a href="/hotel/books/del?id={{$item ->book_id}}">削除</a></td>
         </tr>
     @endforeach
 </table>
-<table>
+
+<form action="post">
+<label class="selectbox-002">
+  <select>
+      <option>optionの例1</option>
+      <option>optionの例2</option>
+      <option>optionの例3</option>
+  </select>
+</label>
+<input type="submit" value="確認する">
+</form>
   
   <!-- {{-- validateしている --}}
 @if (count($errors) >0)
