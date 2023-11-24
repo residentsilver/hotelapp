@@ -50,6 +50,7 @@
 
   <label class="selectbox-002">
       <select name="selected_option"> <!-- name属性を追加 -->
+        <option value="today">当日の情報を取得</option> <!-- value属性を追加 -->
           <option value="this_month">当月の情報を取得</option> <!-- value属性を追加 -->
           <option value="last_month">先月の情報を取得</option>
           <option value="two_months_ago">先々月の情報を取得</option>

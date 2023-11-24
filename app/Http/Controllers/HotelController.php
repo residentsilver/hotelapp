@@ -113,6 +113,9 @@ public function books_search(Request $request)
     $items = User::all();
     $param =['items' =>$items,'sort'=>$sort,'user' =>$user];
     switch ($request->selected_option) {
+        case 'today':
+            $items = Hotel_book::whereDate('checkin_date', '=', Carbon::today())->get();
+            break;
         case 'last_month':
             $items = Hotel_book::whereMonth('checkin_date', '=', Carbon::now()->subMonth()->month)->get();
             break;
