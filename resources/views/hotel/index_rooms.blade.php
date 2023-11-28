@@ -16,6 +16,7 @@
         <th>部屋タイプ</th>
         <th>部屋番号</th>
         <th>予約</th>
+        <th>template予約</th>
     </tr>
     @foreach ($items as $item)
         <tr>
@@ -23,6 +24,7 @@
           <td>{{$item ->rooms->room_name}}</td>
           <td>{{$item ->room_number}}</td>
           <td><a href="/hotel/rooms/book?id={{$item ->room_id}}">予約ボタン</a></td>
+          <td><a href="/books?id={{$item ->room_id}}">予約ボタン</a></td>
         </tr>
     @endforeach
 </table>

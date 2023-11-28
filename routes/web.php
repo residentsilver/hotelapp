@@ -90,8 +90,8 @@ Route::post('index','TemplateController@index');
 Route::get('room-master','TemplateController@room_master');
 Route::post('room-master','TemplateController@room_master');
 
-Route::get('books','TemplateController@books');
-Route::post('books','TemplateController@books');
+Route::get('books','TemplateController@book_add');
+Route::post('books','TemplateController@book_create');
 
 Route::get('rooms','TemplateController@rooms');
 Route::post('rooms','TemplateController@rooms');
@@ -111,6 +111,8 @@ Route::post('property-single','TemplateController@property_single');
 Route::get('guests','TemplateController@guests');
 Route::post('guests','TemplateController@guests');
 
+Route::get('complete','TemplateController@complete');
+Route::post('complete','TemplateController@complete');
 
 //認証関連
 Auth::routes();
