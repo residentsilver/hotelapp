@@ -9,7 +9,8 @@ class Hotel_book extends Model
     use SoftDeletes;
     protected $guarded = array('book_id');
     protected $primaryKey = 'book_id';
-    protected $dates = ['checkin_date', 'checkout_date'];
+    protected $dates = ['checkin_date', 'checkout_date','deleted_at'];
+
 
 
     public function guests(){

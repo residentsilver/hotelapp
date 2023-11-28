@@ -33,6 +33,13 @@ public function Hotel_books()
     // {
     //     return $this->id.': '.$this->name.' ('.$this->price.')';
     // }
-
+    protected static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($post) {
+            $post->Hotel_books()->delete();
+            //Hotel_books()はhasManyの関係を作っているメソッドを呼び出している。
+        });
+    }
 
 }

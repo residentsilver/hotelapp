@@ -60,7 +60,7 @@ public function menu(Request $request){
         return redirect('/hotel/guests');
     }
 
-//      return view('book.add');がわかっていない
+    
     public function add(Request $request){
         $number = Hotel_room_master::find($request ->room_number);
         return view('hotel.index_rooms_book' , ['form' =>$number]);
