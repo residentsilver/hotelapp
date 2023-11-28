@@ -20,13 +20,15 @@ class CreateHotelBookDetailsTable extends Migration
                 ->references('book_id')
                 ->on('hotel_books')
                 ->onDelete('RESTRICT')
-                ->onUpdate('RESTRICT');
+                ->onUpdate('RESTRICT')
+                ->onDelete('CASCADE');
             $table->bigInteger('room_id')->unsigned(); // unsigned で正の値のみを許可
                 $table->foreign('room_id')
                     ->references('room_id')
                     ->on('hotel_rooms')
                     ->onDelete('RESTRICT')
-                    ->onUpdate('RESTRICT');
+                    ->onUpdate('RESTRICT')
+                    ->onDelete('CASCADE');
             $table->integer('stay_days');
             $table->integer('stay_price');
             $table->timestamps();

@@ -24,6 +24,7 @@ class CreateHotelBooksTable extends Migration
             $table->integer('number_of_people');
             $table->datetime('checkin_date');
             $table->datetime('checkout_date');
+            $table->softDeletes(); 
             $table->timestamps();
         });
     }

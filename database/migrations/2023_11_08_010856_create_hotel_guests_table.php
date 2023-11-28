@@ -18,6 +18,7 @@ class CreateHotelGuestsTable extends Migration
             $table->string('guests_name');
             $table->string('guests_address');
             $table->string('guests_tel');
+            $table->softDeletes(); 
             $table->timestamps();
         });
     }

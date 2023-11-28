@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Auth;
 use PHPUnit\Framework\MockObject\Stub\ReturnReference;
 use Carbon\Carbon;
 
+use Illuminate\Database\Eloquent\Model;
+
 class HotelController extends Controller
 {
+
+
 
 //利用者メニュー
 public function menu(Request $request){

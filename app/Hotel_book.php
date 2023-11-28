@@ -3,9 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Hotel_book extends Model
 {
+    use SoftDeletes;
     protected $guarded = array('book_id');
     protected $primaryKey = 'book_id';
     protected $dates = ['checkin_date', 'checkout_date'];
