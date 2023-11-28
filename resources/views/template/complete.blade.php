@@ -27,8 +27,9 @@
     <table>
       <th>氏名</th>
       <td>
-        {{$books->guests_id}}</td>
+        {{$guests->guests_name}}</td>
     </table>
+    
     
     <section class="section bg-image overlay" style="background-image: url('images/hero_4.jpg');">
         <div class="container" >

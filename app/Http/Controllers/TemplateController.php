@@ -62,7 +62,8 @@ public function book_create(Request $request){
     $details->stay_days =$books->checkout_date->diffInDays($books->checkin_date) ;
     $details->stay_price =  $books->book_id;//stay_priceをと決めておく必要あり
     $details ->save();
-    return view('template.complete', ['books' =>$books], ['details' =>$details]);
+    $guests =$books->guests();
+    return view('template.complete', ['books' =>$books], ['details' =>$details],$guests);
 }
 
 

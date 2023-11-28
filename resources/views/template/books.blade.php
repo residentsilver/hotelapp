@@ -43,7 +43,7 @@
                   <div class="field-icon-wrap">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                     {{-- 人数をinputにしてみた --}}
-                    <input type="number" name="number_of_people">
+                    <input type="number" name="number_of_people" min="0">
                     {{-- <select name="number_of_people" id="adults" class="form-control">
                       <option value="">1</option>
                       <option value="">2</option>
@@ -64,7 +64,7 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label class="text-black font-weight-bold" for="checkin_date">チェックイン日付</label>
-                  <input type="date" name="checkin_date">
+                  <input type="date" name="checkin_date" >
                 </div>
                 <div class="col-md-6 form-group">
                   <label class="text-black font-weight-bold" for="checkout_date">チェックアウト日付</label>

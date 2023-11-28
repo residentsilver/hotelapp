@@ -40,9 +40,9 @@
         <tr>
           <input type="hidden" name="room_id" value="{{$form->room_id}}">
             <td><input type="hidden" name="id"></td>
-            <td><input type="number"name="guests_id"></td>
+            <td><input type="number"name="guests_id" min="0"></td>
             <td>
-              <input type="number" name="number_of_people">
+              <input type="number" name="number_of_people" min="0">
             </td>
             <td>{{$form->rooms->room_name}}</td>
             <td>{{$form->room_number}}</td>
