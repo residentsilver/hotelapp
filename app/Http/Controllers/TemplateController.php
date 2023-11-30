@@ -60,10 +60,10 @@ public function book_create(Request $request){
     $details->book_id = $books->book_id;
     $details->room_id = $request->input('room_id');
     $details->stay_days =$books->checkout_date->diffInDays($books->checkin_date) ;
-    $details->stay_price =  $books->book_id;//stay_priceをと決めておく必要あり
+    $details->stay_price =  $books->book_id;//stay_priceを決めておく必要あり
     $details ->save();
-    $guests =$books->guests();
-    return view('template.complete', ['books' =>$books], ['details' =>$details],$guests);
+    $guests =$books->guests;
+    return view('template.complete', ['books' =>$books,'details' =>$details,'guests' =>$guests]);
 }
 
 

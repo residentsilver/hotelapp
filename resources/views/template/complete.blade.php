@@ -24,10 +24,19 @@
     <!-- END section -->
 
 
-    <table>
+    <table class="table-dark">
+      <th>予約番号</th>
       <th>氏名</th>
+      <th>チェックイン</th>
+      <th>チェックアウト</th>
+      <th>部屋タイプ</th>
+      <th>部屋番号</th>
+      <th>価格</th>
       <td>
-        {{$guests->guests_name}}</td>
+        {{dd($details)}}
+        {{$details->}}
+        {{$guests->guests_name}}
+      </td>
     </table>
     
     
