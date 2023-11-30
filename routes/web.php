@@ -36,6 +36,10 @@ Route::post('hotel/guests/add','HotelController@create');
 Route::get('hotel/guests/find','HotelController@find');
 Route::post('hotel/guests/find','HotelController@search');
 
+Route::get('hotel/guests/restore','HotelController@get');
+Route::post('hotel/guests/restore','HotelController@restore');
+
+
 //hotel_books関連
 Route::get('hotel/books','HotelController@books_index')->middleware('auth');
 Route::post('hotel/books','HotelController@books_index');

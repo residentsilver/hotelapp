@@ -88,5 +88,6 @@
       <input class="btn btn-primary btn-lg" class="add" type="submit" value="追加ボタン">
 </form>
 
-
+<br>
+<a href="/hotel/guests/restore">削除した利用者を復元する</a>
 @endsection

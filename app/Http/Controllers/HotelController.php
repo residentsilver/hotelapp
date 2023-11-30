@@ -60,6 +60,15 @@ public function menu(Request $request){
         return redirect('/hotel/guests');
     }
 
+    public function get(Request $request) {
+        return view('hotel.index_guests_restore');
+    }
+
+    public function restore(Request $request) {
+        Hotel_guest::withTrashed()->restore();
+        // Hotel_book::withTrashed()->restore();
+        return view('hotel.index_guests_restore');
+    }
     
     public function add(Request $request){
         $number = Hotel_room_master::find($request ->room_number);
