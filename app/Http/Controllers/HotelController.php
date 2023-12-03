@@ -228,7 +228,7 @@ public function masters_index(Request $request)
 
 
 
-//hotel book detailsモデル ではない。
+//hotel book detailsモデル ではない。 多対多を成立させるために利用する。
 public function details_index(Request $request)
 {
     $items = Hotel_book::all(); 
