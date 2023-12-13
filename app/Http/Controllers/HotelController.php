@@ -66,7 +66,7 @@ public function menu(Request $request){
 
     public function restore(Request $request) {
         Hotel_guest::withTrashed()->restore();
-        // Hotel_book::withTrashed()->restore();
+        Hotel_book::withTrashed()->restore();
         return view('hotel.index_guests');
     }
     
